@@ -1,4 +1,4 @@
-const API_BASE = "http://todo-backend-service/api/todo";
+const API_BASE = "http://localhost/api/todo";
 const listEl = document.getElementById("todo-list");
 const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");

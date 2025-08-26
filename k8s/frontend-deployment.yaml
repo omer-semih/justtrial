@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-frontend
+  template:
+    metadata:
+      labels:
+        app: todo-frontend
+    spec:
+      containers:
+        - name: todo-frontend
+          image: omersemih/todo-frontend:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-frontend-service
+spec:
+  selector:
+    app: todo-frontend
+  ports:
+    - port: 80       # Cluster içi erişim
+      targetPort: 80
+  type: ClusterIP

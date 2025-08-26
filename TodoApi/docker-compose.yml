@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+    container_name: todo-backend
+    ports:
+      - "5123:8080"
+    networks:
+      - todo-net
+
+  frontend:
+    build:
+      context: ./TodoApiFrontend
+    container_name: todo-frontend
+    ports:
+      - "5050:80"
+    depends_on:
+      - backend
+    networks:
+      - todo-net
+
+networks:
+  todo-net:
+    driver: bridge

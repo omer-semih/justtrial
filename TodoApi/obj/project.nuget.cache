@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "d1fqsDT9tGM=",
+  "success": true,
+  "projectFilePath": "/Users/omersemih/Desktop/TodoAPiProject/TodoApi/TodoApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/omersemih/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "/Users/omersemih/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo — Cozy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div>
+        <h1>My Todo App</h1>
+        <p class="subtitle">Let's start!</p>
+      </div>
+      <div class="stats" id="stats">0 tasks</div>
+    </header>
+
+    <section class="input-area">
+      <form id="todo-form">
+        <input id="todo-input" type="text" placeholder="Add a new task..." maxlength="120" />
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </section>
+
+    <section class="list-area">
+      <ul id="todo-list" class="todo-list"></ul>
+    </section>
+
+    <footer class="app-footer">
+      <div class="legend">
+        <span class="dot pending"></span> pending
+        <span class="dot done"></span> done
+      </div>
+      <div class="hint">Click a task to toggle complete • Double-click to delete</div>
+    </footer>
+  </main>
+
+  <!-- check mark SVG template (hidden) -->
+  <svg style="display:none;">
+    <symbol id="check" viewBox="0 0 24 24">
+      <path fill="none" stroke="white" stroke-width="2" d="M4 12l5 5L20 6"></path>
+    </symbol>
+  </svg>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -32,13 +32,22 @@ pipeline {
         }
 
         stage('Push to Registry') {
-            steps {
+    steps {
+        script {
+            withCredentials([usernamePassword(
+                credentialsId: 'dockerhub-credentials',
+                usernameVariable: 'DOCKER_USER',
+                passwordVariable: 'DOCKER_PASS'
+            )]) {
                 sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
                 sh 'docker push omersemih/todo-backend:1.0.0'
                 sh 'docker push omersemih/todo-frontend:1.0.0'
             }
         }
+    }
+}
 
         // Stage 5: Deploy → Kubernetes, daha sonra ekleyebiliriz
     }
 }
+

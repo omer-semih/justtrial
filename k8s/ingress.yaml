@@ -14,7 +14,7 @@ spec:
                 name: todo-frontend-service
                 port:
                   number: 80
-          - path: /api/todo
+          - path: /api
             pathType: Prefix
             backend:
               service:

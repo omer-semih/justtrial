@@ -1,4 +1,4 @@
-const API_BASE = "http://todo-backend-service:80/api/todo";
+const API_BASE = "/api/todo";
 
 // --- DOM elements ---
 const listEl = document.getElementById("todo-list");
